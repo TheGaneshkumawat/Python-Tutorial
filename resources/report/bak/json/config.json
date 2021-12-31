@@ -1,0 +1,13 @@
+{
+  "series": [{
+    "type": "PieSeries",
+    "dataFields": {
+      "value": "litres",
+      "category": "country"
+    }
+  }],
+  "dataSource" : {
+    "url": "json/data.json"
+  },
+  "legend": {}
+}

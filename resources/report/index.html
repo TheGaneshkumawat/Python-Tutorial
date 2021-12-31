@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>amCharts</title>
+  <script src="http://www.amcharts.com/lib/4/core.js"></script>
+  <script src="http://www.amcharts.com/lib/4/charts.js"></script>
+<style>
+        #chart {
+            width: 100%;
+            height: 400px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Report</h1>
+    <div id="chart"></div>
+    <script type="text/javascript">
+        var chart = am4core.createFromConfig({
+            // Create pie series
+            "series": [{
+                "type": "PieSeries",
+                "dataFields": {
+                    "value": "Status",
+                    "category": "URLs"
+                }
+            }],
+            // Add data
+            "data": [{"URLs": "https://github.com/", "ExpectedOutput": "GitHub: Where the world builds software \u00c2\u00b7 GitHub", "Status": "250"}, {"URLs": "https://stackoverflow.com/", "ExpectedOutput": "Stack Overflow - Where Developers Learn, Share, & Build Careers", "Status": "300"}, {"URLs": "https://www.geeksforgeeks.org/", "ExpectedOutput": "GeeksforGeeks | A computer science portal for geeks", "Status": "500"}],
+            // And, for a good measure, let's add a legend
+            "legend": {}
+
+        }, "chart", "PieChart");
+    </script>
+</body>
+</html>
